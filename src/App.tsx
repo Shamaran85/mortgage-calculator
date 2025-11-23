@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import Desktop from "./components/Layout/Desktop";
 import Header from "./components/Layout/Header";
@@ -24,20 +24,6 @@ function App() {
       interest: 3,
     }
   );
-  // const [mode, setMode] = useState<"light" | "dark">("light");
-  // const theme = useMemo(() => themeFactory(mode), [mode]);
-
-  // const [values, setValues] = useLocalStorageState<CalculatorValues>(
-  //   "mortgage-calculator-values",
-  //   {
-  //     price: 1_000_000,
-  //     downPayment: 150_000,
-  //     income: 0,
-  //     maintenance: 0,
-  //     monthlyFee: 0,
-  //     interest: 3,
-  //   }
-  // );
 
   const updateValue = (key: keyof CalculatorValues) => (value: number) => {
     setValues((prev) => ({ ...prev, [key]: value }));
