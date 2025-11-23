@@ -4,6 +4,9 @@ import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
   base: "/mortgage-calculator/",
+  build: {
+    outDir: "docs",
+  },
   plugins: [
     react(),
     VitePWA({
